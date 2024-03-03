@@ -17,7 +17,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t suhasc/dummy-server .
-        docker tag dummy-server:latest suhasc/dummy-server:latest
+        docker build -t dummy-server .
+        #docker tag dummy-server:latest suhasc/dummy-server:latest
         docker login -u suhasc -p ${{ secrets.DOCKER_PASSWORD }}
-        docker push suhasc/dummy-server:latest
+        docker push dummy-server suhasc/dummy-server:latest
